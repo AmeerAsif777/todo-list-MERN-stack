@@ -1,38 +1,31 @@
-
-
 body {
-  width: 50%;
   margin: 0 auto;
-  background: cornsilk;
-}
-
-header {
-  text-align: center;
+  background: #8b93af94;
+  font-family: cursive;
 }
 
 header h1 {
-  font-size: 100px;
-  color: #2c3e50;
+  color: #50c32a;
   font-weight: 200;
+  font-family: cursive;
 }
 
 input {
   font-size: 20px;
-  color: #2c3e50;
-  width: 100%;
+  color: #39af4d;
   border: none;
   outline: none;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid #2c3e50;
   padding: 5px;
 }
 
 .task {
-  background-color: #34495e;
+  background-color: #1662af;
   padding: 15px;
-  margin: 5px;
+  margin: 15px;
   overflow-x: hidden;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -66,23 +59,33 @@ article {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  width: 100px;
+  width: 150px;
   border-radius: 5px;
   margin-top: 15px;
+  font-family: cursive;
+  background-color: lawngreen;
 }
 
 .button.selected {
   color: #FFF;
-  background-color: #6c6777;
+  background-color: #4b21a7;
+  font-family: cursive;
 }
 
 .button.clear {
   float: right;
   color: #FFF;
   background-color: #ee1630;
-  width: 170px;
+  width: 200px;
 }
 
-.divider{
+.divider {
+  width: 50%;
+  margin: 0 auto;
   background-color: 'yellow';
+  border: solid;
+  border-color: black;
+  border-radius: 15px;
+  background-color: #c7b4b4;
+  margin-top: 15px;
 }
