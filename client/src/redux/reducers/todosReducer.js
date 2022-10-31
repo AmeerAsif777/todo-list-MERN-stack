@@ -18,7 +18,8 @@ export const todosReducers = (state = [], action) => {
             ))
         case actionTypes.DELETE_TODO:
             return state.filter(todo => todo._id !== action.payload._id);
-        
+        case actionTypes.LOGOUT:
+            return [];
         default: 
             return state;
     }

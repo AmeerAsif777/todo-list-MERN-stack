@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1>To-do-List</h1>
+            <h1>Add Tasks</h1>
         </header>
     )
 }
