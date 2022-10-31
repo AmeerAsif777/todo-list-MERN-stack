@@ -18,7 +18,9 @@ export const Todos = () => {
     const todos = useSelector(state => state.todos);
     const currentTab = useSelector(state => state.currentTab);
 
-    useEffect(() => {
+    useEffect(() =>
+    {
+        console.log("CALLING............................................................");
         dispatch(getAllTodos());
     }, [])
 

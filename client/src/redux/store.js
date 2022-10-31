@@ -4,10 +4,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { todosReducers } from './reducers/todosReducer';
 import { tabReducer } from './reducers/tabReducer';
+import { authReducer} from './reducers/user';
 
 const reducer = combineReducers({
     todos: todosReducers,
-    currentTab: tabReducer
+    currentTab: tabReducer,
+    auth: authReducer
 })
 
 
