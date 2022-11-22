@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 
 const TodoSchema = new mongoose.Schema({
+    ownerId: { type: String, required: true },
     data: {
         type: String,
         required: true
