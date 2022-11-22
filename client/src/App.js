@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 
 // components
@@ -9,7 +9,10 @@ import TodoForm from './components/TodoForm';
 import Todos from './components/Todos';
 import Auth from './components/Auth/Auth';
 import Navbar from './components/Navbar/Navbar';
-
+import CreateForm from './components/createForm/CreateForm'
+import GetForm from './components/getForm/GetForm'
+// import Header from './components/header/Header'
+import EditForm from './components/editForm/EditForm'
 
 function Home() {
   return (
@@ -24,10 +27,16 @@ const App = () => (
   <BrowserRouter>
     <Container maxWidth="lg">
       <Navbar />
-      <Switch>
-      <Route path="/" exact component={Auth} />
-        <Route path="/home" exact component={Home} />
-      </Switch>
+      <Routes>
+        <Route path="/" exact element={<Auth />} />
+        {/*
+        <Route path="/home" exact component={Home} /> 
+         */}
+        <Route path="/home" element={<GetForm />} />
+          <Route path="/create" element={<CreateForm />} />
+        <Route path="/home/edit/:userId" element={<EditForm />} />
+       
+      </Routes>
     </Container>
   </BrowserRouter>
 );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
@@ -13,13 +13,13 @@ const Navbar = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
   const location = useLocation();
-  const history = useHistory();
+  const history = useNavigate();
   const classes = useStyles();
 
   const logout = () => {
     dispatch({ type: actionType.LOGOUT });
 
-    history.push('/');
+    history('/');
 
     setUser(null);
   };
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <div className={classes.brandContainer}>
-        <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">To-do-List</Typography>
+        <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">Photo Gallery</Typography>
         {/*<img className={classes.image} src={business} alt="icon" height="60" />*/}
       </div>
       <Toolbar className={classes.toolbar}>
